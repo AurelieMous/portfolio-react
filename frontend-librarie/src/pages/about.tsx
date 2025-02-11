@@ -13,7 +13,7 @@ export default function AboutPage() {
 
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center md:py-3">
+      <section className="flex flex-col items-center justify-center gap-5 py-8 md:py-10">
         <div className="inline-block max-w-lg text-center justify-center">
           <h1 className={title()}>À propos</h1>
         </div>
@@ -25,8 +25,7 @@ export default function AboutPage() {
           }
         >
           <div className={isDesktopOrLaptop ? "mt-8 w-1/2" : "w-full p-8"}>
-            <h2 className="text-3xl pb-4">Une nouvelle aventure ...</h2>
-            <p className="text-justify pb-4">
+            <p className="break-words pb-4">
               Après cinq années enrichissantes en tant que diététicienne, où
               j’ai pu accompagner de nombreuses personnes dans leur bien-être,
               j’ai découvert une{" "}
@@ -38,7 +37,7 @@ export default function AboutPage() {
               correspond à ma curiosité et à mon goût pour les nouvelles
               technologies.
             </p>
-            <p className="text-justify pb-4">
+            <p className="break-words pb-4">
               Actuellement en formation pour obtenir un titre professionnel
               équivalent bac+4 en
               <span className="font-bold">
@@ -52,7 +51,7 @@ export default function AboutPage() {
               pratique tout en contribuant à des projets concrets au sein d’une
               équipe dynamique.
             </p>
-            <p className="text-justify pb-4 italic">
+            <p className="break-words pb-4 italic">
               ＂Je suis particulièrement motivée par les défis qu’offre cette
               reconversion. Mon esprit créatif et mon approche analytique,
               développés au fil de ma première carrière, me poussent à innover

@@ -23,7 +23,7 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-1">Météo</ModalHeader>
-            <ModalBody className="text-justify">
+            <ModalBody className="break-words">
               <p>
                 Utilisation de l&#39;API météo api.openweathermap, avec une clé
                 API stockée dans une variable dans un fichier de variables

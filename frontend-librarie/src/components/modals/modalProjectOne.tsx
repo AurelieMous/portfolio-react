@@ -22,7 +22,7 @@ const ModalProjectOne: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-1">Portfolio</ModalHeader>
-            <ModalBody className="text-justify">
+            <ModalBody className="break-words">
               <p>
                 Réalisé avec React et TypeScript, en mettant à profit les connaissances acquises lors de ma formation de Concepteur Développeur d&#39;Application.
               </p>

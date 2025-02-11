@@ -14,9 +14,8 @@ export default function SkillsPage() {
 
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center w-full gap-20 p-[5%] sm:p-[8%] lg:p-[10%]">
-        {/* Titre */}
-        <div className="max-w-lg text-center">
+      <section className="flex flex-col items-center justify-center gap-5 py-8 md:py-10">
+        <div className=" text-center">
           <h1 className={title()}>Mes skills</h1>
         </div>
 

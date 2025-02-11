@@ -11,7 +11,7 @@ export default function DefaultLayout({
   return (
     <div className="relative flex flex-col h-screen">
       <Navbar />
-      <main className="container mx-auto max-w-7xl flex-grow pt-16">
+      <main className="container mx-auto max-w-7xl flex-grow">
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3">
@@ -21,18 +21,8 @@ export default function DefaultLayout({
           </span>
           <span className={isDesktopOrLaptop ? "text-default-600" : "text-xs"}>
             {" "}
-            - Crée par
+            - Crée par Aurélie Moustardier, tout droits réservés.
           </span>
-          <p
-            className={
-              isDesktopOrLaptop ? "text-secondary" : "text-secondary text-xs"
-            }
-          >
-            Aurélie Moustardier
-          </p>
-          <p className={isDesktopOrLaptop ? "text-default-600" : "text-xs"}>
-            tout droits réservés.
-          </p>
         </span>
       </footer>
     </div>

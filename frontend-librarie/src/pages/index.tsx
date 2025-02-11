@@ -22,7 +22,7 @@ export default function IndexPage() {
           }
         >
           <span className={title()}>Hello, I&#39;m&nbsp;</span>
-          <span className={title({ color: "violet" })}>Aurélie&nbsp;</span>
+          <Link href="/about/" className={title({ color: "violet" })}>Aurélie&nbsp;</Link>
           <br />
           <span className={title()}>
             a
@@ -52,8 +52,8 @@ export default function IndexPage() {
             isDesktopOrLaptop ? "flex gap-3 pt-10" : "flex flex-col gap-3 pt-10"
           }
         >
-          <Button as={Link} color="secondary" href="/about/" variant="ghost">
-            A propos
+          <Button as={Link} color="secondary" href="/projects/" variant="ghost">
+            Mes projets
           </Button>
           <Button
             showAnchorIcon

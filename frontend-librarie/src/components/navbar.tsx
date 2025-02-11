@@ -49,14 +49,18 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal href={siteConfig.links.linkedin} title="Linkedin">
-            <FaLinkedin className="text-default-500 text-2xl" />
-          </Link>
-          <Link isExternal href={siteConfig.links.github} title="GitHub">
-            <GithubIcon className="text-default-500 text-2xl" />
-          </Link>
-          <ThemeSwitch />
+        <NavbarItem className="hidden sm:flex gap-8">
+          <div className="flex gap-2">
+            <Link isExternal href={siteConfig.links.linkedin} title="Linkedin">
+              <FaLinkedin className="text-default-500 text-3xl" />
+            </Link>
+            <Link isExternal href={siteConfig.links.github} title="GitHub">
+              <GithubIcon className="text-default-500" />
+            </Link>
+          </div>
+          <div className="flex">
+            <ThemeSwitch className="border border-gray-500 p-2 rounded-md" />
+          </div>
         </NavbarItem>
       </NavbarContent>
 
@@ -74,7 +78,7 @@ export const Navbar = () => {
         </NavbarContent>
       )}
 
-      {/* Contenu du Menu Burger (géré automatiquement par NextUI) */}
+      {/* Contenu du Menu Burger (géré automatiquement par HeroUI) */}
       <NavbarMenu>
         {siteConfig.navItems.map((item) => (
           <NavbarMenuItem key={item.href}>

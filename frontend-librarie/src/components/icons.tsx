@@ -3,7 +3,7 @@ import * as React from "react";
 import { IconSvgProps } from "@/types";
 
 export const GithubIcon: React.FC<IconSvgProps> = ({
-  size = 24,
+  size = 32,
   width,
   height,
   ...props

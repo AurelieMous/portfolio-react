@@ -14,14 +14,14 @@ import ModalProjectOne from "@/components/modals/modalProjectOne.tsx";
 import DefaultLayout from "@/layouts/default";
 import { title } from "@/components/primitives";
 import ModalProjectTwo from "@/components/modals/modalProjectTwo.tsx";
-import ModalProjectThree from "@/components/modals/modalProjectThree.tsx";
+//import ModalProjectThree from "@/components/modals/modalProjectThree.tsx";
 import {useMediaQueryPersonnalise} from "@/context/mediaQueryContext.tsx";
 
 export default function ProjectsPage() {
   // Déplacer les useDisclosure en dehors du ParentComponent
   const modal1 = useDisclosure();
   const modal2 = useDisclosure();
-  const modal3 = useDisclosure();
+  //const modal3 = useDisclosure();
 
   const {isDesktopOrLaptop} = useMediaQueryPersonnalise();
   // const modal4 = useDisclosure();
@@ -97,7 +97,7 @@ export default function ProjectsPage() {
             </CardFooter>
           </Card>
           {/* 3eme card */}
-          <Card className="py-4">
+          {/*<Card className="py-4">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
               <h4 className="font-bold text-large">En cours</h4>
               <div className="flex flex-col items items-center justify-center alig gap-2">
@@ -121,7 +121,7 @@ export default function ProjectsPage() {
                 onOpenChange={modal3.onOpenChange}
               />
             </CardFooter>
-          </Card>
+          </Card>*/}
         </div>
       </section>
     </DefaultLayout>

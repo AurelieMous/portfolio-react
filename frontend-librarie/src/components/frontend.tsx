@@ -3,7 +3,7 @@ import { Button } from "@heroui/button";
 import { FaHtml5 } from "react-icons/fa";
 import { BiLogoCss3, BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { IoLogoReact } from "react-icons/io5";
-import { SiSass, SiTailwindcss } from "react-icons/si";
+import { SiRedux, SiSass, SiTailwindcss } from "react-icons/si";
 import { DiBootstrap } from "react-icons/di";
 
 export default function FrontEnd() {
@@ -30,6 +30,13 @@ export default function FrontEnd() {
       source: "Cours en ligne",
     },
     {
+      name: "TypeScript",
+      color: "bg-blue-600",
+      icon: <BiLogoTypescript />,
+      learning: "Formation CDA*",
+      source: "École O'Clock / En entreprise",
+    },
+    {
       name: "React",
       color: "bg-blue-400",
       icon: <IoLogoReact />,
@@ -37,11 +44,11 @@ export default function FrontEnd() {
       source: "École O'Clock",
     },
     {
-      name: "TypeScript",
-      color: "bg-blue-600",
-      icon: <BiLogoTypescript />,
+      name: "Redux",
+      color: "bg-purple-500",
+      icon: <SiRedux />,
       learning: "Formation CDA*",
-      source: "École O'Clock / En entreprise",
+      source: "École O'Clock",
     },
     {
       name: "Sass",

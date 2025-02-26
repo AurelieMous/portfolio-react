@@ -25,16 +25,21 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
             <ModalHeader className="flex flex-col gap-1">Météo</ModalHeader>
             <ModalBody className="break-words">
               <p>
-                Utilisation de l&#39;API météo api.openweathermap, avec une clé
-                API stockée dans une variable dans un fichier de variables
-                d&#39;environnement. Ce projet a été initialement réalisé en
-                JavaScript au début de l&#39;année 2024, dans le cadre de mon
-                apprentissage autodidacte de ce langage. Il a ensuite été mis à
-                jour.
+                Ce projet personnel a été initialement développé en JavaScript
+                au début de l&#39;année 2024, lorsque j&#39;ai commencé à
+                apprendre la programmation en autodidacte. l&#39;API météo{" "}
+                <code>api.openweathermap</code>, avec une clé API stockée dans
+                un fichier de variables d&#39;environnement pour assurer la
+                sécurité des données sensibles.
               </p>
+
               <p>
-                Mise en pratique de mes connaissances acquises pendant ma
-                formation en cours de Développeur Concepteur d&#39;Application.
+                Grâce aux compétences acquises au fil de ma formation en
+                Développeur Concepteur d&#39;Application, j&#39;ai fait évoluer
+                ce projet en le migrant vers React. Cette refonte m&#39;a permis
+                d&#39;améliorer la structure du code, de mieux gérer l&#39;état
+                de l&#39;application et d&#39;offrir une expérience utilisateur
+                plus fluide et dynamique.
               </p>
             </ModalBody>
             <ModalFooter>

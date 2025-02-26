@@ -8,6 +8,7 @@ import {
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
+
 import { GithubIcon } from "@/components/icons.tsx";
 
 interface IModalProject {
@@ -24,13 +25,25 @@ const ModalProjectOne: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
             <ModalHeader className="flex flex-col gap-1">Portfolio</ModalHeader>
             <ModalBody className="break-words">
               <p>
-                Réalisé avec React et TypeScript, en mettant à profit les connaissances acquises lors de ma formation de Concepteur Développeur d&#39;Application.
+                Ce projet a été développé avec React et TypeScript, en
+                appliquant les connaissances acquises lors de ma formation de
+                Concepteur Développeur d&#39;Application. Cette stack
+                technologique permet d&#39;assurer une application robuste,
+                maintenable et performante.
               </p>
+
               <p>
-                Mise en place également d&#39;un workflow à l&#39;aide de GitHub Actions afin de bénéficier d&#39;une intégration et d&#39;un déploiement continus.
+                Un workflow CI/CD a également été mis en place à l&#39;aide de
+                GitHub Actions, garantissant une intégration et un déploiement
+                continus. Cela permet d&#39;automatiser les tests, les builds et
+                le déploiement, assurant ainsi une meilleure fiabilité et une
+                mise en production simplifiée.
               </p>
+
               <p>
-                Utilisation de HeroUi pour l&#39;interface utilisateur du projet.
+                L&#39;interface utilisateur repose sur HeroUI, offrant un design
+                moderne, épuré et responsive, tout en facilitant le
+                développement grâce à ses composants réutilisables.
               </p>
             </ModalBody>
             <ModalFooter>

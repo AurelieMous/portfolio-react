@@ -1,13 +1,13 @@
 import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import { Image } from "@heroui/image";
 import { IoLogoReact } from "react-icons/io5";
-import {FaCss3Alt, FaHtml5} from "react-icons/fa";
-import {SiChakraui, SiNextui, SiTailwindcss} from "react-icons/si";
+import { FaCss3Alt, FaHtml5 } from "react-icons/fa";
+import { SiChakraui, SiNextui, SiRedux, SiTailwindcss } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { Button } from "@heroui/button";
 import { useDisclosure } from "@heroui/modal";
-import poketeam from "../assets/image/poketeam.png"
 
+import poketeam from "../assets/image/poketeam.png";
 import meteoImage from "../assets/image/meteo.png";
 import portfolioImage from "../assets/image/portfolio.png";
 
@@ -16,7 +16,7 @@ import DefaultLayout from "@/layouts/default";
 import { title } from "@/components/primitives";
 import ModalProjectTwo from "@/components/modals/modalProjectTwo.tsx";
 import ModalProjectThree from "@/components/modals/modalProjectThree.tsx";
-import {useMediaQueryPersonnalise} from "@/context/mediaQueryContext.tsx";
+import { useMediaQueryPersonnalise } from "@/context/mediaQueryContext.tsx";
 
 export default function ProjectsPage() {
   // Déplacer les useDisclosure en dehors du ParentComponent
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
   const modal2 = useDisclosure();
   const modal3 = useDisclosure();
 
-  const {isDesktopOrLaptop} = useMediaQueryPersonnalise();
+  const { isDesktopOrLaptop } = useMediaQueryPersonnalise();
   // const modal4 = useDisclosure();
 
   return (
@@ -33,7 +33,13 @@ export default function ProjectsPage() {
         <div className="flex items-center justify-center">
           <h1 className={title()}>Mes Projets</h1>
         </div>
-        <div className={ isDesktopOrLaptop ? "pt-10 flex gap-10" : " flex pt-10 flex-col gap-10"}>
+        <div
+          className={
+            isDesktopOrLaptop
+              ? "pt-10 flex gap-10"
+              : " flex pt-10 flex-col gap-10"
+          }
+        >
           {/* Première carte */}
           <Card className="py-4">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
@@ -58,7 +64,13 @@ export default function ProjectsPage() {
               />
             </CardBody>
             <CardFooter className="flex justify-center items-center w-full pt-5">
-              <Button onPress={modal1.onOpen} color={"secondary"} variant={"ghost"}>Détails</Button>
+              <Button
+                color={"secondary"}
+                variant={"ghost"}
+                onPress={modal1.onOpen}
+              >
+                Détails
+              </Button>
               <ModalProjectOne
                 isOpen={modal1.isOpen}
                 onOpenChange={modal1.onOpenChange}
@@ -89,7 +101,13 @@ export default function ProjectsPage() {
               />
             </CardBody>
             <CardFooter className="flex justify-center items-center w-full pt-5">
-              <Button onPress={modal2.onOpen} color={"secondary"} variant={"ghost"}>Détails</Button>
+              <Button
+                color={"secondary"}
+                variant={"ghost"}
+                onPress={modal2.onOpen}
+              >
+                Détails
+              </Button>
               <ModalProjectTwo
                 isOpen={modal2.isOpen}
                 onOpenChange={modal2.onOpenChange}
@@ -106,7 +124,8 @@ export default function ProjectsPage() {
                   <IoLogoReact className=" text-3xl text-violet-600" />
                   <BiLogoTypescript className=" text-3xl text-blue-500" />
                   <FaHtml5 className=" text-3xl text-orange-600" />
-                  <SiChakraui className=" text-3xl text-blue-300"/>
+                  <SiChakraui className=" text-3xl text-blue-300" />
+                  <SiRedux className=" text-3xl text-violet-600" />
                 </div>
               </div>
             </CardHeader>
@@ -119,7 +138,13 @@ export default function ProjectsPage() {
               />
             </CardBody>
             <CardFooter className="flex justify-center items-center w-full pt-5">
-              <Button onPress={modal3.onOpen} color={"secondary"} variant={"ghost"}>Détails</Button>
+              <Button
+                color={"secondary"}
+                variant={"ghost"}
+                onPress={modal3.onOpen}
+              >
+                Détails
+              </Button>
               <ModalProjectThree
                 isOpen={modal3.isOpen}
                 onOpenChange={modal3.onOpenChange}

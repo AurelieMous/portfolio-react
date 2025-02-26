@@ -1,7 +1,7 @@
 import { Popover, PopoverContent, PopoverTrigger } from "@heroui/popover";
 import { Button } from "@heroui/button";
 import { BiLogoNodejs } from "react-icons/bi";
-import { SiDjango } from "react-icons/si";
+import { SiDjango, SiNestjs } from "react-icons/si";
 import { DiPython } from "react-icons/di";
 
 export default function Backend() {
@@ -24,6 +24,13 @@ export default function Backend() {
       name: "NodeJS",
       color: "bg-green-700 text-white",
       icon: <BiLogoNodejs />,
+      learning: "Formation CDA*",
+      source: "École O'Clock",
+    },
+    {
+      name: "NestJS",
+      color: "bg-red-500 text-white",
+      icon: <SiNestjs />,
       learning: "Formation CDA*",
       source: "École O'Clock",
     },

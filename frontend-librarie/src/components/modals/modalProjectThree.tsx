@@ -39,13 +39,21 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
               <p>
                 PokeTeam! s&#39;appuie sur une API externe pour récupérer des
                 données Pokémon en temps réel, permettant aux utilisateurs
-                d'explorer et de sélectionner leurs créatures préférées.
+                d&#39;explorer et de sélectionner leurs créatures préférées.
               </p>
 
               <p>
                 Le design de l&#39;application est entièrement réalisé avec
                 Chakra UI, garantissant une interface utilisateur ergonomique,
                 responsive et esthétique.
+              </p>
+
+              <p>
+                Afin de gérer efficacement l&#39;état global de
+                l&#39;application, Redux est utilisé. Il permet une gestion
+                centralisée des données, facilitant ainsi la synchronisation des
+                informations entre les composants et améliorant la performance
+                et la maintenabilité du projet.
               </p>
             </ModalBody>
             <ModalFooter>

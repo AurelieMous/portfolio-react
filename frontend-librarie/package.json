@@ -9,7 +9,8 @@
   "build": "tsc && vite build",
   "lint": "eslint -c .eslintrc.json ./src/**/**/*.{ts,tsx} --fix",
   "preview": "vite preview",
-  "postbuild": "cp dist/index.html dist/200.html"
+  "postbuild": "cp dist/index.html dist/200.html",
+  "surge": "surge --project ./dist --domain aurelie-portfolio.surge.sh"
  },
  "dependencies": {
   "@heroui/accordion": "2.2.8",

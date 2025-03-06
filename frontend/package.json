@@ -8,7 +8,8 @@
   "dev": "vite",
   "build": "tsc && vite build",
   "lint": "eslint -c .eslintrc.json ./src/**/**/*.{ts,tsx} --fix",
-  "preview": "vite preview"
+  "preview": "vite preview",
+  "surge": "surge --project ./dist --domain aurelie-portfolio.surge.sh"
   },
  "dependencies": {
   "@heroui/accordion": "2.2.8",

@@ -32,7 +32,7 @@ jobs:
 
       # Install dependencies using npm ci
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       # Build the project using npm run build
       - name: Build the project

@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import App from "./App.tsx";
-import { Provider } from "./provider.tsx";
+import { Provider } from "./provider";
 
 import "./styles/globals.css";
-import { MediaQueryProvider } from "@/context/mediaQueryContext.tsx";
+import { MediaQueryProvider } from "./context/mediaQueryContext";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

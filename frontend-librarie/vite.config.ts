@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: "/aureliemous.github.io/",
   build: {
-    outDir: "frontend-librarie/dist",
+    outDir: "dist",
   },
   resolve: {
     alias: {

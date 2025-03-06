@@ -5,7 +5,7 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/portfolio-react/",
+  base: "/",
   server: {
     host: true,
     watch: {

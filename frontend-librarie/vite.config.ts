@@ -1,8 +1,14 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
+import path from "path";
 
 export default defineConfig({
-  base: '/aureliemous.github.io/',
+  base: "/aureliemous.github.io/",
   build: {
-    outDir: 'dist',
+    outDir: "dist",
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
 });

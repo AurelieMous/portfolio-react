@@ -1,40 +1,40 @@
-name: deploy to Surge
+# name: deploy to Surge
 
-on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
+# on:
+  # push:
+    # branches:
+      # - master
+  # workflow_dispatch:
 
-concurrency:
-  group: "surge"
-  cancel-in-progress: true
+# concurrency:
+  #group: "surge"
+  #cancel-in-progress: true
 
-jobs:
-  deploy:
-    environment: production
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./frontend-librarie
+#jobs:
+  #deploy:
+    #environment: production
+    #runs-on: ubuntu-latest
+    #defaults:
+      #run:
+        #shell: bash
+        #working-directory: ./frontend-librarie
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./frontend-librarie
-      - name: Build the project
-        run: npm run build
-        working-directory: ./frontend-librarie
-      - name: Install Surge
-        run: npm install --global surge
-      - name: Deploy
-        run: surge --project ./frontend-librarie/dist --domain aurelie-portfolio.surge.sh --force
-        env:
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+    #steps:
+      #- name: Checkout
+       # uses: actions/checkout@v4
+      #- name: Setup Node.js environment
+      #  uses: actions/setup-node@v4
+       # with:
+        #  node-version: 18
+      #- name: Install dependencies
+       # run: npm install
+       # working-directory: ./frontend-librarie
+      #- name: Build the project
+      #  run: npm run build
+      #  working-directory: ./frontend-librarie
+      #- name: Install Surge
+        #run: npm install --global surge
+      #- name: Deploy
+      #  run: surge --project ./frontend-librarie/dist --domain aurelie-portfolio.surge.sh --force
+      #  env:
+       #   SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}

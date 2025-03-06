@@ -19,7 +19,6 @@ Ce projet a été réalisé pendant ma formation en alternance chez **O'Clock** 
 - ✨ Interface épurée et intuitive
 - 📝 Affichage optimisé des informations essentielles
 - 🌟 Technologies modernes pour un rendu rapide et fluide
-- 🛠️ Mise en place d'un workflow `.github` pour assurer un déploiement CI/CD sur **Surge.io**
 
 ## 💬 Contact
 
@@ -30,4 +29,3 @@ Si vous souhaitez en savoir plus ou discuter de mon projet, n'hésitez pas à me
 - **GitHub** : [Mon GitHub](https://github.com/AurelieMous)
 
 Merci d'avoir visité mon projet ! 🚀
-

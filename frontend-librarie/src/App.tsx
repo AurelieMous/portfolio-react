@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 
-import IndexPage from "@/pages/index";
-import AboutPage from "@/pages/about";
-import SkillsPage from "@/pages/skills.tsx";
-import ProjectsPage from "@/pages/projects.tsx";
-import ContactPage from "@/pages/contact.tsx";
+import IndexPage from "./pages/index";
+import AboutPage from "./pages/about";
+import SkillsPage from "./pages/skills.tsx";
+import ProjectsPage from "./pages/projects.tsx";
+import ContactPage from "./pages/contact.tsx";
 
 function App() {
   return (

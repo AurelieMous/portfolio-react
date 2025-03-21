@@ -7,9 +7,12 @@ import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 import { useMediaQueryPersonnalise } from "@/context/mediaQueryContext";
+import {useRef} from "react";
+import VariableProximity from './VariableProximity';
 
 export default function IndexPage() {
   const { isDesktopOrLaptop } = useMediaQueryPersonnalise();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <DefaultLayout>
@@ -21,26 +24,17 @@ export default function IndexPage() {
               : "inline-block max-w-lg text-center justify-center"
           }
         >
-          <span className={title()}>Hello, I&#39;m&nbsp;</span>
-          <Link href="/about/" className={title({ color: "violet" })}>Aurélie&nbsp;</Link>
-          <br />
-          <span className={title()}>
-            a
-            <Link
-              color="foreground"
-              href="/skills/"
-              size="lg"
-              style={{
-                fontSize: "3rem",
-                margin: "1rem",
-                cursor: "pointer",
-                textDecoration: "underline",
-              }}
-            >
-              full-stack
-            </Link>
-            developer
-          </span>
+          <div ref={containerRef} style={{ position: 'relative', display: 'inline-block' }}>
+            <VariableProximity
+                label="Hello, I'm Aurélie, a full-stack developer"
+                className="variable-proximity-demo"
+                fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                containerRef={containerRef}
+                radius={100}
+                falloff="linear"
+            />
+          </div>
           <div className={subtitle({ class: "mt-4 pt-10" })}>
             En alternance pour Concepteur Développeur d&#39;Application
             jusqu&#39;en juillet 2026.

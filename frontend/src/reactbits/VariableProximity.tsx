@@ -1,4 +1,11 @@
-import { forwardRef, useMemo, useRef, useEffect, RefObject } from "react";
+import {
+  forwardRef,
+  useMemo,
+  useRef,
+  useEffect,
+  RefObject,
+  HTMLAttributes,
+} from "react";
 import { motion } from "framer-motion";
 import "./VariableProximity.css";
 
@@ -52,7 +59,7 @@ function useMousePositionRef(containerRef: RefObject<HTMLElement>) {
   return positionRef;
 }
 
-interface VariableProximityProps {
+interface VariableProximityProps extends HTMLAttributes<HTMLSpanElement> {
   label: string;
   fromFontVariationSettings: string;
   toFontVariationSettings: string;
@@ -62,7 +69,6 @@ interface VariableProximityProps {
   className?: string;
   onClick?: () => void;
   style?: React.CSSProperties;
-  [key: string]: any;
 }
 
 const VariableProximity = forwardRef<HTMLSpanElement, VariableProximityProps>(
@@ -83,6 +89,10 @@ const VariableProximity = forwardRef<HTMLSpanElement, VariableProximityProps>(
     const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
     const interpolatedSettingsRef = useRef<string[]>([]);
     const mousePositionRef = useMousePositionRef(containerRef);
+    const lastPositionRef = useRef<{ x: number | null; y: number | null }>({
+      x: null,
+      y: null,
+    });
 
     const parsedSettings = useMemo(() => {
       const parseSettings = (settingsStr: string) =>
@@ -130,6 +140,12 @@ const VariableProximity = forwardRef<HTMLSpanElement, VariableProximityProps>(
 
     useAnimationFrame(() => {
       if (!containerRef?.current) return;
+      const { x, y } = mousePositionRef.current;
+
+      if (lastPositionRef.current.x === x && lastPositionRef.current.y === y) {
+        return;
+      }
+      lastPositionRef.current = { x, y };
       const containerRect = containerRef.current.getBoundingClientRect();
 
       letterRefs.current.forEach((letterRef, index) => {

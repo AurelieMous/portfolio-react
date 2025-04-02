@@ -56,7 +56,6 @@ function Stylesheet() {
       .split-word {
         will-change: transform, opacity;
         font-size: 1.3rem;
-        font-style: italic;
       }
     `}</style>
   );

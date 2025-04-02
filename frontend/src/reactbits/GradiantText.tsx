@@ -1,4 +1,4 @@
-import './GradiantText.css'
+import "./GradiantText.css";
 import { ReactNode } from "react";
 
 interface GradientTextProps {
@@ -12,9 +12,9 @@ interface GradientTextProps {
 export default function GradientText({
   children,
   className = "",
-  colors = ["#6020A0", "#FF4ECD", "#AE7EDE", "#c7aaf0", "#F2EAFA"], // Default colors
-  animationSpeed = 8, // Default animation speed in seconds
-  showBorder = true, // Default overlay visibility
+  colors = ["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"], // Couleurs par défaut
+  animationSpeed = 8, // Durée d'animation en secondes
+  showBorder = false, // Overlay désactivé par défaut
 }: GradientTextProps) {
   const gradientStyle = {
     backgroundImage: `linear-gradient(to right, ${colors.join(", ")})`,

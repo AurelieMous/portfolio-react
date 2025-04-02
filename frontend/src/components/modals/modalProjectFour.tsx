@@ -1,7 +1,7 @@
 import {Modal, ModalBody, ModalContent, ModalFooter, ModalHeader} from "@heroui/modal";
 import {Button} from "@heroui/button";
 
-interface IModalProject {
+export interface IModalProject {
   isOpen: boolean;
   onOpenChange: (isOpen: boolean) => void;
 }
@@ -17,9 +17,7 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
             </ModalHeader>
             <ModalBody>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                pulvinar risus non risus hendrerit venenatis. Pellentesque sit
-                amet hendrerit risus, sed porttitor quam.
+
               </p>
             </ModalBody>
             <ModalFooter>

@@ -1,10 +1,13 @@
 import DefaultLayout from "@/layouts/default";
 import { title } from "@/components/primitives";
-import { useMediaQueryPersonnalise } from "@/context/mediaQueryContext.tsx";
 import Projects from "@/components/projects.tsx";
+import {useDisclosure} from "@heroui/modal";
 
 export default function ProjectsPage() {
-  const { isDesktopOrLaptop } = useMediaQueryPersonnalise();
+  const modal1 = useDisclosure();
+  const modal2 = useDisclosure();
+  const modal3 = useDisclosure();
+  const modal4 = useDisclosure();
 
   return (
     <DefaultLayout>
@@ -13,13 +16,9 @@ export default function ProjectsPage() {
           <h1 className={title()}>Mes Projets</h1>
         </div>
         <div
-          className={
-            isDesktopOrLaptop
-              ? "pt-10 flex gap-10"
-              : " flex pt-10 flex-col gap-10"
-          }
+          className="flex flex-wrap items-center justify-center gap-5 py-8 md:py-10"
         >
-          <Projects />
+          <Projects modals={[modal1, modal2, modal3, modal4]} />
         </div>
       </section>
     </DefaultLayout>

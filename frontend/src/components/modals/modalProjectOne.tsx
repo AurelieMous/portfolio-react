@@ -25,25 +25,26 @@ const ModalProjectOne: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
             <ModalHeader className="flex flex-col gap-1">Portfolio</ModalHeader>
             <ModalBody className="break-words">
               <p>
-                Ce projet a été développé avec React et TypeScript, en
-                appliquant les connaissances acquises lors de ma formation de
-                Concepteur Développeur d&#39;Application. Cette stack
-                technologique permet d&#39;assurer une application robuste,
-                maintenable et performante.
+                ChocolateAPI est une API REST développée avec Node.js et TypeScript,
+                conçue pour alimenter un blog de recettes de cuisine. Ce projet a été
+                l’occasion de mettre en pratique la structuration d’une API complète, avec
+                une architecture claire, un typage strict et une séparation des
+                responsabilités bien définie.
               </p>
 
               <p>
-                Un workflow CI/CD a également été mis en place à l&#39;aide de
-                GitHub Actions, garantissant une intégration et un déploiement
-                continus. Cela permet d&#39;automatiser les tests, les builds et
-                le déploiement, assurant ainsi une meilleure fiabilité et une
-                mise en production simplifiée.
+                L’authentification est sécurisée grâce à l’utilisation de JWT et Bcrypt,
+                tandis que la gestion des recettes, des commentaires, des notes et des
+                rôles utilisateur repose sur un système de permissions robuste. Redis est
+                utilisé pour améliorer les performances via la mise en cache des données
+                les plus consultées.
               </p>
 
               <p>
-                L&#39;interface utilisateur repose sur HeroUI, offrant un design
-                moderne, épuré et responsive, tout en facilitant le
-                développement grâce à ses composants réutilisables.
+                L’ensemble de l’application est conteneurisé avec Docker, facilitant le
+                déploiement de l’API, de la base de données PostgreSQL et du système de
+                cache Redis. Ce projet démontre mes compétences en backend moderne, en
+                gestion des accès, en sécurisation des API et en industrialisation.
               </p>
             </ModalBody>
             <ModalFooter>
@@ -53,7 +54,7 @@ const ModalProjectOne: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
                   variant: "bordered",
                   radius: "full",
                 })}
-                href={"https://github.com/AurelieMous/portfolio-react"}
+                href={"https://github.com/AurelieMous/chocolateAPI"}
               >
                 <GithubIcon size={20} />
                 Mon repo

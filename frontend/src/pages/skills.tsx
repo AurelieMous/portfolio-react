@@ -1,12 +1,7 @@
 import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
-import FrontEnd from "@/components/frontend.tsx";
-import Backend from "@/components/backend.tsx";
-import Database from "@/components/bdd.tsx";
-import Outilsdev from "@/components/outilsdev.tsx";
-import System from "@/components/system.tsx";
-import Ide from "@/components/ide.tsx";
-import Category from "@/components/category.tsx";
+import SkillsList from "@/components/skillsList.tsx";
+import FilterSkills from "@/components/filterSkills.tsx";
 
 export default function SkillsPage() {
 
@@ -18,15 +13,12 @@ export default function SkillsPage() {
         <div className=" text-center">
           <h1 className={title()}>Mes skills</h1>
         </div>
-
+        <div>
+          <FilterSkills/>
+        </div>
         {/* Contenu (Front, Back, DB, etc.) */}
-        <div className="flex flex-col w-full max-w-2xl gap-5">
-          <Category title="Front" component={<FrontEnd />} />
-          <Category title="Back" component={<Backend />} />
-          <Category title="Database" component={<Database />} />
-          <Category title="Outils de développement" component={<Outilsdev />} />
-          <Category title="Système d'exploitation" component={<System />} />
-          <Category title="Environnement de développement" component={<Ide />} />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-8">
+          <SkillsList />
         </div>
 
         {/* Note */}

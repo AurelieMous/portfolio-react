@@ -1,4 +1,4 @@
-export type SiteConfig = typeof siteConfig;
+const base = "#/";
 
 export const siteConfig = {
   name: "Aurélie Moustardier - Portfolio",
@@ -6,25 +6,24 @@ export const siteConfig = {
   navItems: [
     {
       label: "Accueil",
-      href: "/",
+      href: `${base}`,
     },
     {
       label: "À propos",
-      href: "/about",
+      href: `${base}about`,
     },
     {
       label: "Skills",
-      href: "/skills",
+      href: `${base}skills`,
     },
     {
       label: "Mes projets",
-      href: "/projects",
+      href: `${base}projects`,
     },
     {
       label: "Contact",
-      href: "/contact",
+      href: `${base}contact`,
     },
-
   ],
   navMenuItems: [],
   links: {

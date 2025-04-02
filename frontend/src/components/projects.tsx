@@ -1,24 +1,34 @@
 import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { IoLogoReact } from "react-icons/io5";
-import { FaCss3Alt, FaHtml5 } from "react-icons/fa";
-import { SiChakraui, SiNextui, SiRedux, SiTailwindcss } from "react-icons/si";
+import { FaCss3Alt, FaDocker, FaHtml5, FaNodeJs } from "react-icons/fa";
+import {
+  SiChakraui,
+  SiNextui,
+  SiPostgresql,
+  SiRedis,
+  SiRedux,
+  SiTailwindcss,
+} from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { Image } from "@heroui/image";
-import { Button } from "@heroui/button";
-import { useDisclosure } from "@heroui/modal";
+import * as motion from "motion/react-client";
 
 import portfolioImage from "@/assets/image/portfolio.png";
-import SpotlightCard from "@/reactbits/SpotlightCard.tsx";
 import ModalProjectOne from "@/components/modals/modalProjectOne.tsx";
 import meteoImage from "@/assets/image/meteo.png";
 import poketeam from "@/assets/image/poketeam.png";
+import chocolateApi from "@/assets/image/chocolate_api.png"
 
-export default function Projects() {
-  // Instance des modales
-  const modal1 = useDisclosure();
-  const modal2 = useDisclosure();
-  const modal3 = useDisclosure();
+interface ModalControl {
+    isOpen: boolean;
+    onOpen: () => void;
+    onOpenChange: (isOpen: boolean) => void;
+}
+interface ModalsProps {
+    modals: ModalControl[];
+}
 
+export default function Projects({ modals }: ModalsProps) {
   const projects = [
     {
       nom: "Portfolio",
@@ -33,7 +43,7 @@ export default function Projects() {
         />,
       ],
       image: portfolioImage,
-      modal: modal1,
+      modal: modals[0],
     },
     {
       nom: "NaoMétéo",
@@ -44,7 +54,7 @@ export default function Projects() {
         <BiLogoTypescript key="ts" className="text-3xl text-blue-500" />,
       ],
       image: meteoImage,
-      modal: modal2,
+      modal: modals[1],
     },
     {
       nom: "PokeTeam!",
@@ -56,19 +66,33 @@ export default function Projects() {
         <SiRedux key="redux" className="text-3xl text-violet-600" />,
       ],
       image: poketeam,
-      modal: modal3,
+      modal: modals[2],
+    },
+    {
+      nom: "ChocolateAPI",
+      technologies: [
+        <FaNodeJs key="nodejs" className="text-3xl text-green-500" />,
+        <BiLogoTypescript key="ts" className="text-3xl text-blue-500" />,
+        <SiRedis key="redis" className="text-3xl text-red-500" />,
+        <FaDocker key="docker" className="text-3xl text-blue-500" />,
+        <SiPostgresql key="postgresql" className="text-3xl text-blue-900" />,
+      ],
+      image: chocolateApi,
+      modal: modals[3],
     },
   ];
 
   return (
-    <div>
+    <>
       {projects.map(({ nom, technologies, image, modal }) => (
-        <SpotlightCard
+        <motion.div
+          className="cursor-pointer"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          onClick={modal.onOpen}
           key={nom}
-          className="custom-spotlight-card"
-          spotlightColor="rgba(0, 229, 255, 0.2)"
         >
-          <Card className="py-4">
+          <Card className="h-[400px] w-[300px] flex flex-col justify-between bg-white dark:bg-neutral-900 shadow rounded-xl overflow-hidden">
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
               <h4 className="font-bold text-large">{nom}</h4>
               <div className="flex flex-col items-center justify-center gap-2">
@@ -89,19 +113,15 @@ export default function Projects() {
                 width={270}
               />
             </CardBody>
-
             <CardFooter className="flex justify-center items-center w-full pt-5">
-              <Button color="secondary" variant="ghost" onPress={modal.onOpen}>
-                Détails
-              </Button>
               <ModalProjectOne
                 isOpen={modal.isOpen}
                 onOpenChange={modal.onOpenChange}
               />
             </CardFooter>
           </Card>
-        </SpotlightCard>
+        </motion.div>
       ))}
-    </div>
+    </>
   );
 }

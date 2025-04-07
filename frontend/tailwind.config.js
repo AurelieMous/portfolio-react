@@ -17,6 +17,22 @@ module.exports = {
       }
     },
   },
+  safelist: [
+    "bg-orange-500",
+    "bg-blue-500",
+    "bg-blue-600",
+    "bg-yellow-500",
+    "bg-blue-400",
+    "bg-purple-500",
+    "bg-pink-500",
+    "bg-teal-500",
+    "bg-black",
+    "text-white",
+    "bg-green-500",
+    "bg-blue-300",
+    "bg-blue-950",
+    "bg-yellow-400"
+  ],
   darkMode: "class",
   plugins: [
     heroui({

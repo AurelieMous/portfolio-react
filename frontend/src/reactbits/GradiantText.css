@@ -1,0 +1,75 @@
+.animated-gradient-text {
+    position: relative;
+    margin: auto;
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.8rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.5s ease-out;
+    overflow: hidden;
+    cursor: pointer;
+    height: 2.4rem;
+    min-height: 2.4rem;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 300% 100%;
+    animation: gradient linear infinite;
+    border-radius: inherit;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.gradient-overlay::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    height: calc(100% - 2px);
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    z-index: -1;
+}
+.black .gradient-overlay::before {
+    background-color: black;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.text-content {
+    width: 100%;
+    color: white;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient linear infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+}

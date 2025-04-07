@@ -12,11 +12,13 @@ import { button as buttonStyles } from "@heroui/theme";
 import { GithubIcon } from "@/components/icons.tsx";
 
 interface IModalProject {
-  isOpen: boolean; // Renommé de isOpenModal1
-  onOpenChange: (isOpen: boolean) => void; // Renommé de onOpenChange1
+  isOpen: boolean;
+  onOpenChange: (isOpen: boolean) => void;
 }
 
+// 1er modal du 1er projet
 const ModalProjectOne: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
+  // Retourne la modal avec Open et OpenChange
   return (
     <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
       <ModalContent>
@@ -53,7 +55,7 @@ const ModalProjectOne: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
                   variant: "bordered",
                   radius: "full",
                 })}
-                href={"https://github.com/AurelieMous/portfolio-react"}
+                href={"https://github.com/AurelieMous/chocolateAPI"}
               >
                 <GithubIcon size={20} />
                 Mon repo

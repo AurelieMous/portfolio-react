@@ -7,6 +7,7 @@ import monImage from "../assets/image/about.png";
 import DefaultLayout from "@/layouts/default";
 import { title } from "@/components/primitives";
 import { useMediaQueryPersonnalise } from "@/context/mediaQueryContext.tsx";
+import ButtonProjects from "@/components/buttonprojects.tsx";
 
 export default function AboutPage() {
   // Permet de rendre l'application responsive en fonction de l'écran
@@ -64,19 +65,12 @@ export default function AboutPage() {
               <Button
                 as={Link}
                 color="secondary"
-                href="/skills/"
+                href="/portfolio-react/#/skills"
                 variant="solid"
               >
                 Mes Skills
               </Button>
-              <Button
-                as={Link}
-                color="secondary"
-                href="/projects/"
-                variant="solid"
-              >
-                Mes projets
-              </Button>
+              <ButtonProjects/>
             </div>
           </div>
           {isDesktopOrLaptop ? (

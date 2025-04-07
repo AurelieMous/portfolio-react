@@ -22,7 +22,7 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1">Météo</ModalHeader>
+            <ModalHeader className="flex flex-col gap-1">NaoMétéo</ModalHeader>
             <ModalBody className="break-words">
               <p>
                 Ce projet personnel a été initialement développé en JavaScript

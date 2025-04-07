@@ -9,6 +9,7 @@ import { title } from "@/components/primitives";
 import { useMediaQueryPersonnalise } from "@/context/mediaQueryContext.tsx";
 
 export default function AboutPage() {
+  // Permet de rendre l'application responsive en fonction de l'écran
   const { isDesktopOrLaptop } = useMediaQueryPersonnalise();
 
   return (

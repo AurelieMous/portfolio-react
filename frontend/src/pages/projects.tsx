@@ -18,6 +18,7 @@ export default function ProjectsPage() {
         <div
           className="flex flex-wrap items-center justify-center gap-5 py-8 md:py-10"
         >
+          {/* On passe une liste des modals au composant enfant */}
           <Projects modals={[modal1, modal2, modal3, modal4]} />
         </div>
       </section>

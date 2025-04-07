@@ -15,9 +15,10 @@ export default function SkillsPage() {
           <h1 className={title()}>Mes skills</h1>
         </div>
         <div>
+          {/* On fait une passerelle aux enfants pour que le filtre remonte et se transmette à l'autre composant enfant*/}
           <FilterSkills setFilter={setFilter} />
         </div>
-        {/* Contenu (Front, Back, DB, etc.) */}
+        {/* Contenu (Front, Back, DB, etc.) qui prend le filter du composant FilterSkills */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-8">
           <SkillsList filter={filter}/>
         </div>

@@ -2,11 +2,17 @@ import { Popover, PopoverContent, PopoverTrigger } from "@heroui/popover";
 import { Button } from "@heroui/button";
 import {Skills} from "@/data/skillsData.tsx";
 
-export default function SkillsList() {
+interface FilterProps {
+  filter: string;
+}
+
+export default function SkillsList({filter} : FilterProps ) {
+
+  const filteredSkills = filter ? Skills.filter((skill) => skill.skills === filter) : Skills;
 
   return (
     <>
-      {Skills.map(({ name, color, icon, source, skills }) => (
+      {filteredSkills.map(({ name, color, icon, source, skills }) => (
         <Popover key={name} className="relative" placement="bottom">
           <PopoverTrigger>
             <Button

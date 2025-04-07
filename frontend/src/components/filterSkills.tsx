@@ -1,7 +1,11 @@
 import { Autocomplete, AutocompleteItem } from "@heroui/react";
 import { Skills } from "@/data/skillsData.tsx";
 
-export default function FilterSkills() {
+interface SkillsProps {
+    setFilter: (filter: string) => void;
+}
+
+export default function FilterSkills({setFilter}: SkillsProps) {
     // Distinct skills
     const uniqueSkills = Array.from(new Set(Skills.map((s) => s.skills))).map(
         (skill) => ({ key: skill, label: skill })
@@ -13,6 +17,7 @@ export default function FilterSkills() {
             defaultItems={uniqueSkills}
             label="Technologies"
             placeholder="Rechercher un type de compétence"
+            onSelectionChange={(key) => setFilter(key ? String(key) : "")}
             scrollShadowProps={{
                 isEnabled: false,
             }}

@@ -55,7 +55,7 @@ const ModalProjectOne: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
                   variant: "bordered",
                   radius: "full",
                 })}
-                href={"https://github.com/AurelieMous/chocolateAPI"}
+                href={"https://github.com/AurelieMous/portfolio-react"}
               >
                 <GithubIcon size={20} />
                 Mon repo

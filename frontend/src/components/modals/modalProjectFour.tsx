@@ -1,5 +1,8 @@
 import {Modal, ModalBody, ModalContent, ModalFooter, ModalHeader} from "@heroui/modal";
 import {Button} from "@heroui/button";
+import {Link} from "@heroui/link";
+import { button as buttonStyles } from "@heroui/theme";
+import {GithubIcon} from "@/components/icons.tsx";
 
 export interface IModalProject {
   isOpen: boolean;
@@ -13,7 +16,7 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
         {(onClose) => (
           <>
             <ModalHeader className="flex flex-col gap-1">
-              En cours
+              Chocolate API
             </ModalHeader>
             <ModalBody>
                 <p>
@@ -40,9 +43,20 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
                 </p>
             </ModalBody>
             <ModalFooter>
-              <Button color="danger" variant="light" onPress={onClose}>
-                Fermer
-              </Button>
+                <Link
+                    isExternal
+                    className={buttonStyles({
+                        variant: "bordered",
+                        radius: "full",
+                    })}
+                    href={"https://github.com/AurelieMous/chocolateAPI"}
+                >
+                    <GithubIcon size={20} />
+                    Mon repo
+                </Link>
+                <Button color="danger" variant="light" onPress={onClose}>
+                    Fermer
+                </Button>
             </ModalFooter>
           </>
         )}

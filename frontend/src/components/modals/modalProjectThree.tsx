@@ -68,6 +68,11 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
                 <GithubIcon size={20} />
                 Mon repo
               </Link>
+              <Link
+                  isExternal
+                  isBlock showAnchorIcon color="secondary"
+                  href={"https://poke-team.surge.sh/"}
+              >En ligne</Link>
               <Button color="danger" variant="light" onPress={onClose}>
                 Fermer
               </Button>

@@ -2,11 +2,10 @@ import { ReactNode } from "react";
 import {
   SiGithubactions,
   SiPostgresql,
-  SiRedux,
   SiSass,
   SiTailwindcss,
   SiDjango,
-  SiNestjs, SiPycharm, SiWebstorm,
+  SiNestjs, SiExpress, SiApollographql, SiDocker,
 } from "react-icons/si";
 import {
   BiLogoCss3,
@@ -15,10 +14,11 @@ import {
   BiLogoNodejs,
   BiLogoTypescript,
 } from "react-icons/bi";
-import { FaApple, FaDocker, FaHtml5, FaLinux, FaWindows } from "react-icons/fa";
+import {FaApple, FaDocker, FaGitlab, FaHtml5, FaUbuntu, FaWindows} from "react-icons/fa";
 import { IoLogoReact } from "react-icons/io5";
 import { DiBootstrap, DiPython } from "react-icons/di";
-import {VscVscode} from "react-icons/vsc";
+import {TbBrandReactNative} from "react-icons/tb";
+import {GrGraphQl} from "react-icons/gr";
 
 export interface Skill {
   name: string;
@@ -45,35 +45,28 @@ export const Skills: Skill[] = [
   },
   {
     name: "JavaScript",
-    color: "bg-yellow-500",
+    color: "bg-orange-500",
     icon: <BiLogoJavascript />,
     source: "Cours en ligne",
     skills: "Frontend",
   },
   {
     name: "TypeScript",
-    color: "bg-blue-600",
+    color: "bg-blue-500",
     icon: <BiLogoTypescript />,
     source: "École O'Clock / En entreprise",
     skills: "Frontend",
   },
   {
     name: "React",
-    color: "bg-blue-400",
+    color: "bg-blue-500",
     icon: <IoLogoReact />,
     source: "École O'Clock",
     skills: "Frontend",
   },
   {
-    name: "Redux",
-    color: "bg-purple-500",
-    icon: <SiRedux />,
-    source: "École O'Clock",
-    skills: "Frontend",
-  },
-  {
     name: "Sass",
-    color: "bg-pink-500 ",
+    color: "bg-pink-500",
     icon: <SiSass />,
     source: "École O'Clock",
     skills: "Frontend",
@@ -121,6 +114,13 @@ export const Skills: Skill[] = [
     skills: "Backend",
   },
   {
+    name: "ExpressJS",
+    color: "bg-blue-500",
+    icon: <SiExpress />,
+    source: "A l'école O'Clock",
+    skills: "Backend"
+  },
+  {
     name: "NestJS",
     color: "bg-orange-500",
     icon: <SiNestjs />,
@@ -135,9 +135,9 @@ export const Skills: Skill[] = [
     skills: "System",
   },
   {
-    name: "Linux",
-    color: "bg-yellow-500",
-    icon: <FaLinux />,
+    name: "Ubuntu",
+    color: "bg-orange-500",
+    icon: <FaUbuntu />,
     source: "Cours en ligne et école O'Clock",
     skills: "System",
   },
@@ -146,14 +146,14 @@ export const Skills: Skill[] = [
     color: "bg-blue-500",
     icon: <FaDocker />,
     source: "École O'Clock",
-    skills: "Outils",
+    skills: "Containerisation",
   },
   {
     name: "GitHub Action",
-    color: "bg-blue-300",
+    color: "bg-blue-500",
     icon: <SiGithubactions />,
     source: "École O'Clock",
-    skills: "Outils",
+    skills: "DevOps",
   },
   {
     name: "PostgreSQL",
@@ -164,30 +164,44 @@ export const Skills: Skill[] = [
   },
   {
     name: "MongoDB",
-    color: "bg-blue-950 ",
+    color: "bg-green-500",
     icon: <BiLogoMongodb />,
     source: "En entreprise et École O'Clock",
     skills: "Database",
   },
   {
-    name: "Visual Studio Code",
+    name: "React Native",
     color: "bg-blue-500",
-    icon: <VscVscode />,
+    icon: <TbBrandReactNative />,
     source: "École O'Clock",
-    skills: "Integrated Development Environment"
+    skills: "Mobile"
   },
   {
-    name: "PyCharm",
-    color: "bg-yellow-400",
-    icon: <SiPycharm />,
+    name: "GitLab Quick Action",
+    color: "bg-orange-500",
+    icon: <FaGitlab />,
     source: "En entreprise",
-    skills: "Integrated Development Environment"
+    skills: "DevOps"
   },
   {
-    name: "WebStorm",
-    color: "bg-green-500",
-    icon: <SiWebstorm />,
-    source: "En entreprise",
-    skills: "Integrated Development Environment"
+    name: "GraphQL",
+    color: "bg-pink-500",
+    icon: <GrGraphQl />,
+    source: "École O'Clock",
+    skills: "Backend"
+  },
+  {
+    name: "ApolloGraphQL",
+    color: "bg-blue-950",
+    icon: <SiApollographql />,
+    source: "École O'Clock",
+    skills: "Backend"
+  },
+  {
+    name: "Docker Swarm",
+    color: "bg-orange-500",
+    icon: <SiDocker />,
+    source: "École O'Clock",
+    skills: "DevOps",
   },
 ];

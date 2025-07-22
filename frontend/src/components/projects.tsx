@@ -2,12 +2,12 @@ import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { IoLogoReact } from "react-icons/io5";
 import { FaCss3Alt, FaDocker, FaHtml5, FaNodeJs } from "react-icons/fa";
 import {
-  SiChakraui,
-  SiNextui,
-  SiPostgresql,
-  SiRedis,
-  SiRedux,
-  SiTailwindcss,
+    SiChakraui, SiNestjs,
+    SiNextui,
+    SiPostgresql, SiPrisma,
+    SiRedis,
+    SiRedux,
+    SiTailwindcss,
 } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { Image } from "@heroui/image";
@@ -17,10 +17,12 @@ import portfolioImage from "@/assets/image/portfolio.png";
 import ModalProjectOne from "@/components/modals/modalProjectOne.tsx";
 import meteoImage from "@/assets/image/meteo.png";
 import poketeam from "@/assets/image/poketeam.png";
-import chocolateApi from "@/assets/image/chocolate_api.png"
+import chocolateApi from "@/assets/image/chocolate_api.png";
+import horseApi from "@/assets/image/horse-api.png";
 import ModalProjectFour from "@/components/modals/modalProjectFour.tsx";
 import ModalProjectThree from "@/components/modals/modalProjectThree.tsx";
 import ModalProjectTwo from "@/components/modals/modalProjectTwo.tsx";
+import ModalProjectFive from "@/components/modals/modalProjectFive.tsx";
 
 interface ModalControl {
     isOpen: boolean;
@@ -81,14 +83,29 @@ export default function Projects({ modals }: ModalsProps) {
         <FaNodeJs key="nodejs" className="text-3xl text-green-500" />,
         <BiLogoTypescript key="ts" className="text-3xl text-blue-500" />,
         <SiRedis key="redis" className="text-3xl text-red-500" />,
-        <FaDocker key="docker" className="text-3xl text-blue-500" />,
+          <SiPrisma  key="postgresql" className="text-3xl text-blue-500" />,
         <SiPostgresql key="postgresql" className="text-3xl text-blue-900" />,
+        <FaDocker key="docker" className="text-3xl text-blue-500"/>
       ],
       image: chocolateApi,
       modal: modals[3],
       modalComponent: ModalProjectFour,
     },
+    {
+      nom: "Horse API",
+      technologies: [
+          <SiNestjs key="nestjs" className="text-3xl text-red-500" />,
+          <BiLogoTypescript key="ts" className="text-3xl text-blue-500" />,
+          <SiPrisma  key="postgresql" className="text-3xl text-blue-500" />,
+          <SiPostgresql key="postgresql" className="text-3xl text-blue-900" />,
+          <FaDocker key="docker" className="text-3xl text-blue-500"/>
+      ],
+      image: horseApi,
+      modal: modals[4],
+      modalComponent: ModalProjectFive,
+    }
   ];
+
   return (
       <>
         {projects.map(({ nom, technologies, image, modal, modalComponent }) => {

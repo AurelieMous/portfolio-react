@@ -17,7 +17,7 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
                 {(onClose) => (
                     <>
                         <ModalHeader className="flex flex-col gap-1">
-                            Chocolate API
+                            Horse API
                         </ModalHeader>
                         <ModalBody>
                             <p>

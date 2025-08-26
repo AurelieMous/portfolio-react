@@ -50,7 +50,7 @@ const ModalProjectTwo: React.FC<IModalProject> = ({ isOpen, onOpenChange }) => {
                                     variant: "bordered",
                                     radius: "full",
                                 })}
-                                href={"https://github.com/AurelieMous/chocolateAPI"}
+                                href={"https://github.com/AurelieMous/horse-api-nestjs"}
                             >
                                 <GithubIcon size={20} />
                                 Mon repo

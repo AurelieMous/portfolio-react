@@ -5,14 +5,16 @@ import Contact from "@/components/homepage/contact.tsx";
 import Skills from "@/components/homepage/skills";
 import ProjectsList from "@/components/homepage/projects.tsx";
 import {Divider} from "@heroui/react";
+import ImageBanner from "@/components/homepage/imageBanner.tsx";
 
 export default function HomePage() {
 
 
     return (
         <DefaultLayout>
-            <section className="flex flex-col gap-52 pt-44 w-full items-center">
-                <section id="home" className="pt-36">
+            <ImageBanner/>
+            <section className="flex flex-col gap-40 pt-44 w-full items-center">
+                <section id="home">
                     <HomeBanner/>
                 </section>
                 <section className="bg-violet-50 dark:bg-gray-900 p-3 rounded-md" id="about">

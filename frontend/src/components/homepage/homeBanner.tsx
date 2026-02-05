@@ -64,7 +64,7 @@ export default function HomeBanner() {
                     showAnchorIcon
                     as={Link}
                     color="secondary"
-                    href="https://oclock.io/formations/cda-alternance"
+                    href="https://www.francecompetences.fr/recherche/rncp/37873/"
                     target="_blank"
                     variant="solid"
                 >

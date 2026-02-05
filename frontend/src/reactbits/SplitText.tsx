@@ -15,42 +15,42 @@ export default function SplitText() {
       const { words } = splitText(containerRef.current.querySelector("h1")!);
 
       animate(
-        words,
-        { opacity: [0, 1], y: [10, 0] },
-        {
-          type: "spring",
-          duration: 2,
-          bounce: 0,
-          delay: stagger(0.05),
-        },
+          words,
+          { opacity: [0, 1], y: [10, 0] },
+          {
+            type: "spring",
+            duration: 2,
+            bounce: 0,
+            delay: stagger(0.05),
+          },
       );
     });
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="container"
-      style={{ visibility: isReady ? "visible" : "hidden" }}
-    >
-      <h1 className="h1">
-        En alternance en tant que Concepteur Développeur d&#39;Application jusqu&#39;en
-        Juin 2026.
-      </h1>
-      <Stylesheet />
-    </div>
+      <div
+          ref={containerRef}
+          className="split-text-container"
+          style={{ visibility: isReady ? "visible" : "hidden" }}
+      >
+        <h1 className="h1">
+          En alternance en tant que Concepteur Développeur d&#39;Application jusqu&#39;en
+          Juin 2026.
+        </h1>
+        <Stylesheet />
+      </div>
   );
 }
 
 function Stylesheet() {
   return (
-    <style>{`
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 420px;
-        text-align: left;
+      <style>{`
+      .split-text-container {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto;
       }
 
       .split-word {

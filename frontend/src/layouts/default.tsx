@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/navbar";
+import { Navbar } from "@/components/layout/navbar.tsx";
 import { useMediaQueryPersonnalise } from "@/context/mediaQueryContext.tsx";
 
 export default function DefaultLayout({
@@ -14,7 +14,7 @@ export default function DefaultLayout({
       <main className="container mx-auto max-w-7xl flex-grow">
         {children}
       </main>
-      <footer className="w-full flex items-center justify-center py-3">
+      <footer className="w-full flex items-center justify-center py-3 bg-violet-50 dark:bg-gray-900 pt-12 pb-12">
         <span className="flex items-center row-auto gap-1 text-current">
           <span className={isDesktopOrLaptop ? "text-default-600" : "text-xs"}>
             {new Date().getFullYear()}

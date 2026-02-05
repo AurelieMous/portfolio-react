@@ -7,7 +7,6 @@ import { title } from "@/components/primitives";
 import SuccessAlert from "@/components/commun/alert.tsx";
 
 export default function Contact() {
-
     // récupérer les données du form
     const [formData, setFormData] = useState({
         nom: "",
@@ -43,8 +42,7 @@ export default function Contact() {
 
         // Ouvre le client de messagerie
         window.location.href = mailtoLink;
-        resetForm()
-
+        resetForm();
     };
 
     // Fonction qui permet de vider les champs du formulaire
@@ -60,18 +58,19 @@ export default function Contact() {
     return (
         <>
             {alert && <SuccessAlert message={alert.message} type={alert.type} />}
-                <div className="inline-block max-w-lg text-center justify-center pb-8">
-                    <h1 className={title()}>Me contacter</h1>
+            <div className="w-full flex flex-col items-center">
+                <div className="w-full text-center pb-16">
+                    <h1 className={title({ color: "violet" })}>Me contacter</h1>
                 </div>
                 <Form
-                    className="w-full max-w-xs flex flex-col items-center justify-center"
+                    className="w-full flex flex-col items-center"
                     validationBehavior="native"
                     onSubmit={(e) => {
                         e.preventDefault();
                         handleSendEmail();
                     }}
                 >
-                    <div className="flex flex-col w-full flex-wrap md:flex-nowrap gap-8 pb-8">
+                    <div className="flex flex-col w-full gap-8 pb-8">
                         <Input
                             isRequired
                             label="Nom"
@@ -110,6 +109,7 @@ export default function Contact() {
                         Envoyer
                     </Button>
                 </Form>
+            </div>
         </>
     );
 }

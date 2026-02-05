@@ -11,8 +11,9 @@ export default function HomePage() {
 
 
     return (
+        <>
+        <ImageBanner/>
         <DefaultLayout>
-            <ImageBanner/>
             <section className="flex flex-col gap-40 pt-44 w-full items-center">
                 <section id="home">
                     <HomeBanner/>
@@ -34,7 +35,7 @@ export default function HomePage() {
                 </section>
 
             </section>
-
         </DefaultLayout>
+        </>
     );
 }

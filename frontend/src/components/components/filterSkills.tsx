@@ -13,17 +13,19 @@ export default function FilterSkills({setFilter}: SkillsProps) {
     );
 
     return (
-        <Autocomplete
-            className="max-w-xs"
-            defaultItems={uniqueSkills}
-            label="Technologies"
-            placeholder="Rechercher"
-            scrollShadowProps={{
-                isEnabled: false,
-            }}
-            onSelectionChange={(key) => setFilter(key ? String(key) : "")}
-        >
-            {(item) => <AutocompleteItem key={item.key}>{item.label}</AutocompleteItem>}
-        </Autocomplete>
+        <div className="flex justify-center w-full pt-10">
+            <Autocomplete
+                className="max-w-xs"
+                defaultItems={uniqueSkills}
+                label="Technologies"
+                placeholder="Rechercher"
+                scrollShadowProps={{
+                    isEnabled: false,
+                }}
+                onSelectionChange={(key) => setFilter(key ? String(key) : "")}
+            >
+                {(item) => <AutocompleteItem key={item.key}>{item.label}</AutocompleteItem>}
+            </Autocomplete>
+        </div>
     );
 }

@@ -7,22 +7,27 @@ export const siteConfig = {
     {
       label: "Accueil",
       href: `${base}`,
+      scrollTo: "home",
     },
     {
       label: "À propos",
-      href: `${base}about`,
+      href: `${base}`,
+      scrollTo: "about",
     },
     {
       label: "Skills",
-      href: `${base}skills`,
+      href: `${base}`,
+      scrollTo: "skills",
     },
     {
       label: "Mes projets",
-      href: `${base}projects`,
+      href: `${base}`,
+      scrollTo: "projects",
     },
     {
       label: "Contact",
-      href: `${base}contact`,
+      href: `${base}`,
+      scrollTo: "contact",
     },
   ],
   navMenuItems: [],

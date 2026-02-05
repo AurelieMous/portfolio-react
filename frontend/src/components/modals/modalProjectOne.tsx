@@ -9,7 +9,7 @@ import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 
-import { GithubIcon } from "@/components/icons.tsx";
+import { GithubIcon } from "@/components/components/icons.tsx";
 
 interface IModalProject {
   isOpen: boolean;

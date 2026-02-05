@@ -2,7 +2,7 @@ import {Modal, ModalBody, ModalContent, ModalFooter, ModalHeader} from "@heroui/
 import {Button} from "@heroui/button";
 import {Link} from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
-import {GithubIcon} from "@/components/icons.tsx";
+import {GithubIcon} from "@/components/components/icons.tsx";
 
 export interface IModalProject {
   isOpen: boolean;

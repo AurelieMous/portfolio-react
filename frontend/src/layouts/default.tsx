@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/navbar";
+import { Navbar } from "@/components/layout/navbar.tsx";
 import { useMediaQueryPersonnalise } from "@/context/mediaQueryContext.tsx";
 
 export default function DefaultLayout({

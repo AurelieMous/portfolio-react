@@ -11,9 +11,9 @@ import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
 import { FaLinkedin } from "react-icons/fa";
 
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import { GithubIcon } from "@/components/icons";
+import { siteConfig } from "@/config/site.ts";
+import { ThemeSwitch } from "@/components/theme-switch.tsx";
+import { GithubIcon } from "@/components/components/icons.tsx";
 import { useMediaQueryPersonnalise } from "@/context/mediaQueryContext.tsx";
 
 export const Navbar = () => {

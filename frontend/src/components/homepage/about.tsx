@@ -11,7 +11,7 @@ export default function About() {
 
     return (
             <>
-                <div className="inline-block max-w-lg text-center justify-center pt-5 pl-5">
+                <div className="text-center justify-center pt-5 pl-5">
                     <h1 className={title({ color: "violet" })}>À propos</h1>
                 </div>
                 <div

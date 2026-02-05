@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+
 import {
   SiGithubactions,
   SiPostgresql,
@@ -19,14 +19,7 @@ import { IoLogoReact } from "react-icons/io5";
 import { DiBootstrap, DiPython } from "react-icons/di";
 import {TbBrandReactNative} from "react-icons/tb";
 import {GrGraphQl} from "react-icons/gr";
-
-export interface Skill {
-  name: string;
-  color: string;
-  icon: ReactNode;
-  source: string;
-  skills: string;
-}
+import {Skill} from "@/types/skills";
 
 export const Skills: Skill[] = [
   {

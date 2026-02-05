@@ -17,30 +17,39 @@ import { GithubIcon } from "@/components/components/icons.tsx";
 import { useMediaQueryPersonnalise } from "@/context/mediaQueryContext.tsx";
 
 export const Navbar = () => {
-  const { isTabletOrMobile } = useMediaQueryPersonnalise(); // Détecte mobile/tablette
+    const { isTabletOrMobile } = useMediaQueryPersonnalise(); // Détecte mobile/tablette
+
+    const handleScroll = (id: string) => {
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl" position="static"
+                  isBlurred
+                  className="fixed top-0 z-50">
       {/* Menu Desktop */}
       <NavbarContent
         className="hidden md:flex basis-1/5 sm:basis-full"
         justify="start"
       >
         <div className="flex gap-4 ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <Link
-                className={clsx(
-                  linkStyles({ color: "secondary", underline: "hover" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </Link>
-            </NavbarItem>
-          ))}
+            {siteConfig.navItems.map((item) => (
+                <Link
+                    key={item.label}
+                    color="secondary"
+                    href="#"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleScroll(item.scrollTo);
+                    }}
+                >
+                    {item.label}
+                </Link>
+            ))}
         </div>
       </NavbarContent>
 
